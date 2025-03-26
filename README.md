@@ -1,6 +1,7 @@
 # Idolverse
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+As final project of 3er evaluation.
 
 ## Development server
 
