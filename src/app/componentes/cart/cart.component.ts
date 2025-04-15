@@ -15,12 +15,12 @@ import { CartService } from '../../services/cart.service';
 export class CarritoComponent {
   cart: any[] = [];
 
-  constructor(private cartService: CarritoComponent, private router: Router) {
+  constructor(private cartService: CartService, private router: Router) {
     this.cart = this.cartService.getCart();
   }
 
   removeItem(index: number) {
-    this.cartService.removeFromCarrit(index);
+    this.cartService.removeFromCart(index);
     this.cart = this.cartService.getCart(); // Actualizar vista
   }
 

@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
-  standalone: true
 })
 export class CartService {
   private cart: any[] = [];
