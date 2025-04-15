@@ -4,6 +4,7 @@ import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-album',
+  standalone: true,
   imports: [NavBarComponent, FooterComponent],
   templateUrl: './album.component.html',
   styleUrl: './album.component.css'
