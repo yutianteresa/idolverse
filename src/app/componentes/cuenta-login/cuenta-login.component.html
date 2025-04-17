@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+<!--login-->
+<div class="cuenta">
+<h2>Iniciar Sesión</h2>
+<input [(ngModel)]="username" placeholder="Nombre de usuario">
+<input [(ngModel)]="password" type="password" placeholder="Contraseña">
+<button (click)="login()">Entrar</button>
+</div>
+<!--register-->
+<div class="cuenta">
+<h2>Crear Cuenta</h2>
+<input [(ngModel)]="registerUsername" placeholder="Nombre de usuario">
+<input [(ngModel)]="registerPassword" type="password" placeholder="Contraseña">
+<input [(ngModel)]="registerEmail" placeholder="Correo electrónico">
+<input [(ngModel)]="registerTelefono" placeholder="Teléfono">
+<input [(ngModel)]="registerDireccion.calleNombre" placeholder="Calle/Nombre">
+<input [(ngModel)]="registerDireccion.numeroCasa" placeholder="Calle/Número">
+<input [(ngModel)]="registerDireccion.municipio" placeholder="Municipio">
+<input [(ngModel)]="registerDireccion.provincia" placeholder="Provincia">
+<input [(ngModel)]="registerDireccion.pais" placeholder="Estado">
+<button (click)="signIn()">Registrar</button>
+</div>
+<app-footer></app-footer>

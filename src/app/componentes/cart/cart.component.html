@@ -1,16 +1,20 @@
 <app-nav-bar></app-nav-bar>
-<!-- <div class="carrito"> -->
 <div class="carrito">
   <h1>Carrito de Compras</h1>
+  
   <div class="productos">
-    <div class="producto" *ngFor="let producto of productos">
-      <img [src]="producto.imagen" alt="{{ producto.nombre }}">
-      <h2>{{ producto.nombre }}</h2>
-      <p>Precio: {{ producto.precio | currency }}</p>
-      <button (click)="removeItem(producto)">Eliminar</button>
+    <div *ngIf="cart.length === 0">
+      <p>Tu carrito está vacío.</p>
+      <button (click)="goToHome()">Volver a la tienda</button>
+    </div>
+    <div class="producto" *ngFor="let item of cart; let i = index">
+      <img [src]="item.image" alt="{{ item.name }}" />
+      <h2>{{ item.name }}</h2>
+      <p>Precio: {{ item.price | currency }}</p>
+      <button (click)="removeItem(item)">Eliminar</button>
     </div>
   </div>
   <div class="total">
     <h2>Total: {{ total | currency }}</h2>
-    <button (click)="realizarPago()">Realizar Pago</button>
+    <button (click)="checkout()">Realizar Pago</button>
   </div>

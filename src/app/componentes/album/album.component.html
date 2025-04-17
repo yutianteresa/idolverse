@@ -1,3 +1,12 @@
 <app-nav-bar></app-nav-bar>
-
+<div class="album-container">
+  <h1>Álbumes</h1>
+  <div class="album-list">
+    <div class="album" *ngFor="let album of products">
+      <img [src]="album.image" alt="{{ album.name }}" />
+      <h2>{{ album.name }}  {{ album.artist }}</h2>
+      <p>Precio: {{ album.price | currency }}</p>
+      <button (click)="addAlbumToCart(album)">🛒</button>
+    </div>
+  </div>
 <app-footer></app-footer>

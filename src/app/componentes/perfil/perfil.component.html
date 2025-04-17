@@ -1,0 +1,12 @@
+<div class="perfil-log"></div>
+<h2>Account Details</h2>
+<div class="perfil">
+  <div class="perfil-info">
+    <h3>Nombre: {{ user.name }}</h3>
+    <h3>Correo: {{ user.email }}</h3>
+    <h3>Teléfono: {{ user.phone }}</h3>
+  </div>
+  <div class="perfil-actions">
+    <button (click)="editProfile()">Editar Perfil</button>
+    <button (click)="deleteAccount()">Eliminar Cuenta</button>
+  </div>

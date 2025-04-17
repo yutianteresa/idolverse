@@ -3,11 +3,13 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { FooterComponent } from '../footer/footer.component';
 import { Router } from '@angular/router';
 import { CartService } from '../../services/cart.service';
+import { CheckoutComponent } from '../checkout/checkout.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-carrito',
-  imports: [NavBarComponent, FooterComponent, CartService],
   standalone: true,
+  imports: [CommonModule, NavBarComponent, FooterComponent, CheckoutComponent],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })
@@ -18,6 +20,13 @@ export class CarritoComponent {
   constructor(private cartService: CartService, private router: Router) {
     this.cart = this.cartService.getCart();
   }
+
+  ngOnInit(){
+    this.cartService.cart$.subscribe(cart => {
+      this.cart = cart;
+    });
+  }
+ total = this.cart.reduce((acc, item) => acc + item.price, 0);
 
   removeItem(index: number) {
     this.cartService.removeFromCart(index);
@@ -31,10 +40,14 @@ export class CarritoComponent {
 
   checkout() {
     if (this.cart.length > 0) {
-      this.router.navigate(['/checkout']);
+      this.router.navigate(['./idolverse/src/app/componentes/checkout.component.html']);
+      alert('🛒 ¡Gracias por tu compra! Tu pedido ha sido procesado con éxito.');
     } else {
-      alert('🛒 Tu carrito está vacío.');
+      alert('🛒 Tu carrito está vacío. Agrega productos antes de finalizar la compra.');
     }
+  }
+  goToHome() {
+    this.router.navigate(['./idolverse/src/app/componentes/home/home.component.html']); // Asegúrate de tener esta ruta
   }
 }
 

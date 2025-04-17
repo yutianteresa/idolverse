@@ -1,10 +1,27 @@
-<!--p>nav-bar works!</p-->
-<div class="logo">IDOLVERSE</div>
-<ul>    
-    <li><a href="../home/home.component.html">Inicio</a></li>
-    <li><a href="../album/album.component.html">Álbumes</a></li>
-    <li><a href="../merch-oficial/merch-oficial.component.html">Merch Oficial</a></li>
-    <li><a href="../neveland-zone/neveland-zone.component.html">Neverland Zone</a></li>
-    <li><a href="../pre-ventas-y-exclusivos/pre-ventas-y-exclusivos.component.html">Pre-ventas & Exclusivos</a></li>
-    <li><a href="../envios-y-soporte/">Envíos & Soporte</a></li>
-</ul>
+<!-- NavBar Component -->
+ <nav>
+    <!-- left, logo y enlace -->
+    <div class="nav-left">
+        <div class="logo">IDOLVERSE</div>
+        <ul>
+            <li><a routerLink="/home">Inicio</a></li>
+            <li><a routerLink="/album">Álbumes</a></li>
+            <li><a routerLink="/merch-oficial">Merch Oficial</a></li>
+            <li><a routerLink="/neveland-zone">Neverland Zone</a></li>
+            <li><a routerLink="/pre-ventas-y-exclusivos">Pre-ventas & Exclusivos</a></li>
+            <li><a routerLink="/envios-y-soporte">Envíos & Soporte</a></li>
+        </ul>
+
+    </div>
+    <!-- right, cuenta y carrito -->
+    <div class="nav-right">
+        <div class="nav-right">
+            <!-- Botón de cuenta -->
+            <button class="btn-account" (click)="goToProfile()">👤 Cuenta</button>
+            <!-- Botón de carrito -->
+            <button class="btn-cart" (click)="goToCart()">
+                🛒 Carrito ({{ cartItemCount }})
+            </button>
+        </div>
+    </div>
+</nav>

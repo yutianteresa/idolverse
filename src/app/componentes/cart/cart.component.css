@@ -1,16 +1,17 @@
 .cart-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .cart-item img {
-    border-radius: 5px;
-  }
-  button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+button {
+  margin-left: auto;
+  background-color: #bf87ff;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
