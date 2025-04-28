@@ -13,7 +13,7 @@ export class AuthService {
   userData$ = this.userData.asObservable();
   
   constructor() { }
-
+  
   login(user: string) {
     this.loggedIn.next(true);
     this.userData.next(user);
@@ -37,5 +37,9 @@ export class AuthService {
     this.loggedIn.next(true);
     this.userData.next(user);
     localStorage.setItem('user', JSON.stringify(user)); // Guarda el usuario en el almacenamiento local
+  }
+  checkLoginStatus() {
+    const user = localStorage.getItem('user');
+    this.loggedIn.next(!!user);
   }
 }

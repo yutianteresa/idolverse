@@ -1,12 +1,29 @@
-<div class="perfil-log"></div>
+<div class="perfil-log">
 <h2>Account Details</h2>
 <div class="perfil">
-  <div class="perfil-info">
-    <h3>Nombre: {{ user.name }}</h3>
-    <h3>Correo: {{ user.email }}</h3>
-    <h3>Teléfono: {{ user.phone }}</h3>
+  <div *ngIf="isLoggedIn; else noLogin">
+    <h2>Bienvenido, {{ username }}</h2>
+    <p><strong>Dirección:</strong> {{ address }}</p>
+    <button (click)="logout()">Cerrar sesión</button>
   </div>
-  <div class="perfil-actions">
-    <button (click)="editProfile()">Editar Perfil</button>
-    <button (click)="deleteAccount()">Eliminar Cuenta</button>
-  </div>
+</div> 
+  <ng-template #noLogin>
+    <p>Debes iniciar sesión para ver tu perfil.</p>
+  </ng-template>
+
+  <div class ="registro de compra">
+    <h3></h3>
+    <h3>Registro de compra</h3>
+    <table>
+      <tr>
+        <td>Nombre de Producto</td>
+        <th>Dirección</th>
+        <th>Fecha de compra</th>
+        <th>Producto</th>
+      </tr>
+      <tr *ngFor="let compra of history">
+        <td>{{ compra.producto }}</td>
+        <td>{{ compra.price }}</td>
+        <td>{{ compra.date }}</td>
+      </tr>
+    </table>

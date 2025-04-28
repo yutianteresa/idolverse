@@ -33,6 +33,7 @@ export class LoginComponent {
     if (this.username.trim()) {
       this.auth.login(this.username);
       this.router.navigate(['./idolverse/src/app/componentes/perfil/perfil.component.html']);
+      localStorage.getItem('user');
     } else {
       alert('Por favor, introduce usuario y contraseña.');
     }
@@ -42,7 +43,7 @@ export class LoginComponent {
       localStorage.setItem('user', JSON.stringify(this.registerUsername));
       localStorage.setItem('email', JSON.stringify(this.registerEmail));
       localStorage.setItem('telefono', JSON.stringify(this.registerTelefono));
-      localStorage.setItem('direccion', JSON.stringify(this.registerDireccion));
+      localStorage.setItem('address', JSON.stringify(this.registerDireccion));
       alert('Usuario registrado con éxito. Ahora puedes iniciar sesión.');
     } else {
       alert('Por favor, introduce un nombre de usuario y una contraseña.');
