@@ -14,9 +14,9 @@ export class PerfilComponent implements OnInit{
   constructor(private auth : AuthService) { } // Constructor vacío
   isLoggedIn: boolean = false; // Estado de inicio de sesión por defecto
   
-  username = ''; // Nombre de usuario por defecto
-  userEmail = ''; // Correo electrónico por defecto
-  address = ''; // Dirección por defecto
+  username = 'ejemplouser'; // Nombre de usuario por defecto
+  userEmail = 'ejemplouser@gmail.com'; // Correo electrónico por defecto
+  address = 'C/ Ejemplo Address 1'; // Dirección por defecto
   ngOnInit() {
     this.auth.isLoggedIn().subscribe(status => {
       this.isLoggedIn = status; // Actualiza el estado de inicio de sesión
@@ -25,7 +25,7 @@ export class PerfilComponent implements OnInit{
         this.username = localStorage.getItem('user') || ''; // Obtiene el nombre de usuario del almacenamiento local
         this.address = localStorage.getItem('address') || '';
         this.userEmail = localStorage.getItem('email') || ''; // Obtiene el correo electrónico del almacenamiento local
-        this.
+        this.history = this.auth.getHistory();
       }
     });
     this.auth.checkLoginStatus();
@@ -33,5 +33,6 @@ export class PerfilComponent implements OnInit{
     logout() {
       this.auth.logout(); // Llama al método de cierre de sesión del servicio de autenticación
     }
-    history
+    history: any[] = []; // Inicializa el historial de compras como un arreglo vacío
+    
 }

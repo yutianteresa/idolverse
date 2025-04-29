@@ -4,8 +4,8 @@
   <div class="album-list">
     <div class="album" *ngFor="let album of products">
       <img [src]="album.image" alt="{{ album.name }}" />
-      <h2>{{ album.name }}  {{ album.artist }}</h2>
-      <p>Precio: {{ album.price | currency }}</p>
+      <h2><a href="">{{ album.name }}  {{ album.artist }}</a></h2>
+      <p>Precio: {{ album.price }}</p>
       <button (click)="addAlbumToCart(album)">🛒</button>
     </div>
   </div>

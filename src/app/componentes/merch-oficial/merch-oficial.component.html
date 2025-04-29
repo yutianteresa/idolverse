@@ -2,4 +2,11 @@
 <h1>Merch Oficial</h1>
 <p>En esta sección encontrarás todo el merchandising oficial de tus idols favoritos.</p>
 <!-- Path: idolverse/src/app/componentes/merch-oficial/merch-oficial.component.ts -->
+<div class="merch-list">
+  <div class="merch-item" *ngFor="let merch of productos">
+    <img [src]="merch.image" alt="{{ merch.name }}" />
+    <h2>{{ merch.name }}</h2>
+    <p>Precio: {{ merch.price}}</p>
+    <button (click)="addToCart(merch)">🛒 add to cart</button>
+  </div>
 <app-footer></app-footer>

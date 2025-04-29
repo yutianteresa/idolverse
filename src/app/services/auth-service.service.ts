@@ -42,4 +42,8 @@ export class AuthService {
     const user = localStorage.getItem('user');
     this.loggedIn.next(!!user);
   }
+  getHistory(): any[] {
+    const history = localStorage.getItem('purchaseHistory');
+    return history ? JSON.parse(history) : [];
+  }
 }
