@@ -3,14 +3,14 @@
     text-align: center;
   }
   
-  .album-grid {
+  .album-list {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
   }
   
-  .album-card {
+  .album {
     border: 1px solid #ccc;
     border-radius: 12px;
     padding: 1rem;

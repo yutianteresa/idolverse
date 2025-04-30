@@ -18,7 +18,6 @@ export const routes: Routes = [
     {path: 'carrito', component: CarritoComponent},
     {path: 'neverland', component: NevelandZoneComponent},
     {path: 'merchandising', component: MerchOficialComponent},
-    {path: 'envios-y-soporte', component: EnviosYSoporteComponent},
     {path: 'checkout', component: CheckoutComponent},
     {path: 'cart-service', component: CartService},
     {path: 'nav-bar', component: NavBarComponent},
