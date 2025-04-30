@@ -1,23 +1,24 @@
 <app-nav-bar></app-nav-bar>
 <!--login-->
-<div class="cuenta">
+<div class="cuenta-login">
 <h2>Iniciar Sesión</h2>
-<input [(ngModel)]="username" placeholder="Nombre de usuario">
-<input [(ngModel)]="password" type="password" placeholder="Contraseña">
+Nombre de usuario<input [(ngModel)]="username" placeholder="Nombre de usuario"><br>
+Contraseña<input [(ngModel)]="password" type="password" placeholder="Contraseña"><br>
 <button (click)="login()">Entrar</button>
 </div>
 <!--register-->
-<div class="cuenta">
+<ng-template #noRegister>
+<div class="cuenta-create">
 <h2>Crear Cuenta</h2>
-<input [(ngModel)]="registerUsername" placeholder="Nombre de usuario">
-<input [(ngModel)]="registerPassword" type="password" placeholder="Contraseña">
-<input [(ngModel)]="registerEmail" placeholder="Correo electrónico">
-<input [(ngModel)]="registerTelefono" placeholder="Teléfono">
-<input [(ngModel)]="registerDireccion.calleNombre" placeholder="Calle/Nombre">
-<input [(ngModel)]="registerDireccion.numeroCasa" placeholder="Calle/Número">
-<input [(ngModel)]="registerDireccion.municipio" placeholder="Municipio">
-<input [(ngModel)]="registerDireccion.provincia" placeholder="Provincia">
-<input [(ngModel)]="registerDireccion.pais" placeholder="Estado">
+Nombre de usuario<input [(ngModel)]="registerUsername" placeholder="Nombre de usuario"><br>
+Contraseña<input [(ngModel)]="registerPassword" type="password" placeholder="Contraseña"><br>
+Email<input [(ngModel)]="registerEmail" placeholder="Correo electrónico"><br>
+Telefono<input [(ngModel)]="registerTelefono" placeholder="Teléfono"><br>
+Calle<input [(ngModel)]="registerDireccion.calleNombre" placeholder="Calle/Nombre">
+<input [(ngModel)]="registerDireccion.numeroCasa" placeholder="Calle/Número"><br>
+Municipio<input [(ngModel)]="registerDireccion.municipio" placeholder="Municipio">
+Provincia<input [(ngModel)]="registerDireccion.provincia" placeholder="Provincia">
+Estado<input [(ngModel)]="registerDireccion.pais" placeholder="Estado"><br>
 <button (click)="signIn()">Registrar</button>
-</div>
+</div></ng-template>
 <app-footer></app-footer>

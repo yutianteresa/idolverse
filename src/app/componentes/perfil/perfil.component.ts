@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth-service.service';
 import { CommonModule } from '@angular/common';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { FooterComponent } from '../footer/footer.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-perfil',
   imports: [CommonModule, NavBarComponent, FooterComponent],
@@ -11,7 +12,7 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './perfil.component.css'
 })
 export class PerfilComponent implements OnInit{
-  constructor(private auth : AuthService) { } // Constructor vacío
+  constructor(private auth : AuthService, private router: Router) { } // Constructor vacío
   isLoggedIn: boolean = false; // Estado de inicio de sesión por defecto
   
   username = 'ejemplouser'; // Nombre de usuario por defecto
@@ -34,5 +35,7 @@ export class PerfilComponent implements OnInit{
       this.auth.logout(); // Llama al método de cierre de sesión del servicio de autenticación
     }
     history: any[] = []; // Inicializa el historial de compras como un arreglo vacío
-    
+    login() {
+      this.router.navigate(['/login']); // Navega a la página de inicio de sesión
+    }
 }

@@ -2,7 +2,7 @@
     padding: 1rem;
     text-align: center;
   }
-  
+
   .album-list {
     display: flex;
     gap: 1rem;
@@ -21,4 +21,20 @@
   .album-card img {
     width: 100%;
     border-radius: 8px;
+  }
+  button {
+    background-color: #d4c7e3;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  button:hover {
+    transform: scale(1.05);
   }

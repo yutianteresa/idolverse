@@ -1,0 +1,25 @@
+* {
+    background-color: #e0b3ff; /* Light purple */
+    
+  }
+.merch-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+button {
+  background-color: #d4c7e3;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+button:hover {
+    transform: scale(1.05);
+}

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '../../services/cart.service';
-import { CheckoutComponent } from '../checkout/checkout.component';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-nav-bar',

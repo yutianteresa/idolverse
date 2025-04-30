@@ -1,0 +1,20 @@
+* {
+    justify-items: center;
+    text-align: center;
+}
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #e0b3ff; /* Light purple */
+}
+.perfil-left {
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #e0b3ff; /* Light purple */
+    border-right: 1px solid #ccc;
+}
+.

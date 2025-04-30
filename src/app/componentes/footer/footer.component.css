@@ -1,0 +1,18 @@
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #bf87ff;
+    color: white;
+    
+}
+ul {
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+    color: azure;
+    text-decoration: none;
+}
+ul a {
+    color: azure;
+    text-decoration: none;
+}
