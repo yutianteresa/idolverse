@@ -22,4 +22,31 @@ export class MerchOficialComponent {
     this.cartService.addToCart(merch);
     alert('🛒 ¡Producto añadido al carrito!');
   }
+  currentPage = 1;
+  itemsPerPage = 4; // Number of items to display per page
+
+  get paginatedMerch() {
+    const start = (this.currentPage - 1) * this.itemsPerPage;
+    return this.productos.slice(start, start + this.itemsPerPage);
   }
+
+  get totalPages() {
+    return Math.ceil(this.productos.length / this.itemsPerPage);
+  }
+
+  nextPage() {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+    }
+  }
+
+  prevPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
+  get pagedMerch() {
+    const start = (this.currentPage - 1) * this.itemsPerPage;
+    return this.productos.slice(start, start + this.itemsPerPage);
+  }
+}

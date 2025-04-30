@@ -2,11 +2,18 @@
 <div class="album-container">
   <h1>Álbumes</h1>
   <div class="album-list">
-    <div class="album" *ngFor="let album of products">
+    <div class="album" *ngFor="let album of pagedAlbums">
       <img [src]="album.image" alt="{{ album.name }}" />
-      <h2><a href="">{{ album.name }}  {{ album.artist }}</a></h2>
-      <p>Precio: {{ album.price }}</p>
+      <h2><a href="">{{ album.name }}</a></h2>
+      <p>Artista: {{ album.artist }}</p>
+      <p>Precio: €{{ album.price }}</p>
       <button (click)="addAlbumToCart(album)">🛒</button>
     </div>
   </div>
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">← Anterior</button>
+  <span>Página {{ currentPage }} de {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente →</button>
+  </div>
+</div>
 <app-footer></app-footer>

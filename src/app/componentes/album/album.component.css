@@ -1,40 +1,90 @@
 .album-container {
-    padding: 1rem;
-    text-align: center;
-  }
+  padding: 1rem;
+  text-align: center;
+}
 
-  .album-list {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+.album-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.album {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 20%;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+img {
+  width: 75%;
+  border-radius: 8px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+a:hover {
+  color: #8f2dff;
+  text-decoration: underline;
+}
+a:visited {
+  color: #333;
+  text-decoration: none;
+}
+button {
+  background-color: #d4c7e3;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 20px;
+}
+button:hover {
+  transform: scale(1.05);
+}
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+}
+
+.pagination button {
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: #d4c7e3;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
   .album {
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    padding: 1rem;
-    width: 200px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    width: 50%;
   }
-  
-  .album-card img {
-    width: 100%;
-    border-radius: 8px;
+  .album-list {
+    flex-direction: column;
+    align-items: center;
   }
   button {
-    background-color: #d4c7e3;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 10px;
   }
-  button:hover {
-    transform: scale(1.05);
-  }
+}
