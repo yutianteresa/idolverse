@@ -1,18 +1,22 @@
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     background-color: #bf87ff;
     color: white;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 ul {
     list-style: none;
     justify-content: center;
     gap: 20px;
-    color: azure;
+    color: aliceblue;
     text-decoration: none;
 }
 ul a {
-    color: azure;
+    color: aliceblue;
     text-decoration: none;
+}
+ul a:visited {
+    text-decoration: none;
+    color: aliceblue;
 }

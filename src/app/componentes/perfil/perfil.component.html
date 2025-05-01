@@ -1,5 +1,6 @@
 <app-nav-bar></app-nav-bar>
 <h2>Account Details</h2>
+<div>
 <div class="perfil">
   <div class="perfil-left">
     <div *ngIf="isLoggedIn; else noLogin">
@@ -8,26 +9,30 @@
       <button (click)="logout()">Cerrar sesión</button>
     </div>
   </div> 
-  <ng-template #noLogin>
-    <p>Debes iniciar sesión para ver tu perfil.</p>
-    <button (click)="login()">Iniciar sesión</button>
-  </ng-template>
-
-  <div class ="registro de compra">
-    <h3></h3>
+  <div class ="registro-de-compra">
     <h3>Registro de compra</h3>
     <table>
+      <thead>
       <tr>
         <th>Nombre de Producto</th>
         <th>Dirección</th>
         <th>Fecha de compra</th>
       </tr>
+    </thead>
+    <tbody>
       <tr *ngFor="let compra of history">
         <td>{{ compra.producto }}</td>
         <td>{{ compra.price }}</td>
         <td>{{ compra.date }}</td>
       </tr>
+    </tbody>
     </table>
   </div>
 </div>
+  <ng-template #noLogin>
+  <p>Debes iniciar sesión para ver tu perfil.</p>
+  <button (click)="login()">Iniciar sesión</button>
+  </ng-template>
+</div>
+
 <app-footer></app-footer>

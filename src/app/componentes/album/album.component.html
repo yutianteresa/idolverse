@@ -3,10 +3,12 @@
   <h1>Álbumes</h1>
   <div class="album-list">
     <div class="album" *ngFor="let album of pagedAlbums">
-      <img [src]="album.image" alt="{{ album.name }}" />
-      <h2><a href="">{{ album.name }}</a></h2>
+      <a [routerLink]="['/producto-detail', album.id]">
+        <img [src]="album.image" alt="{{ album.name }}" />
+        <h2>{{ album.name }}</h2>
+      </a>
       <p>Artista: {{ album.artist }}</p>
-      <p>Precio: €{{ album.price }}</p>
+      <p>Precio: {{ album.price | currency }}</p>
       <button (click)="addAlbumToCart(album)">🛒</button>
     </div>
   </div>

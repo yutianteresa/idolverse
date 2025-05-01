@@ -1,6 +1,27 @@
 <app-nav-bar></app-nav-bar>
-<h2>Neverland Zone</h2>
-<p>Bienvenido a la Neverland Zone, la zona solamente para fandom de grupo de chica (G)I-DLE, el lugar donde los sueños se hacen realidad. Aquí encontrarás una variedad de productos exclusivos y limitados que no querrás perderte.</p>
-
+<div class="neverland-zone">
+  <h1>Neverland Zone</h1>
+  <div class="gallery">
+    <div class="gallery-item" *ngFor="let img of imagenesAnuncios">
+      <img [src]="img.src" [alt]="img.alt" />
+    </div>
+  </div>
+  <h2>Bienvenido a la Neverland Zone, la zona solamente para fandom de grupo de chica (G)I-DLE, el lugar donde los sueños se hacen realidad. Aquí encontrarás una variedad de productos exclusivos y limitados que no querrás perderte.</h2>
+  <div class="neverland-list">
+    <div class="neverland" *ngFor="let producto of pagedProducts">
+      <a [routerLink]="['//producto-detail-i-dle', producto.id]">
+        <img [src]="producto.image" alt="{{ producto.name }}"/>
+        <h2>{{ producto.name }}</h2>
+      </a>
+      <p>Precio: {{ producto.price | currency }}</p>
+      <button (click)="addToCart(producto)">🛒</button>
+    </div>
+  </div>
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">← Anterior</button>
+    <span>Página {{ currentPage }} de {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente →</button>
+  </div>
+</div>
 <app-footer></app-footer>
 

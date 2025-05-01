@@ -5,16 +5,18 @@
   <!-- Path: idolverse/src/app/componentes/merch-oficial/merch-oficial.component.ts -->
   <div class="merch-list">
     <div class="merch" *ngFor="let merch of pagedMerch">
-      <img [src]="merch.image" alt="{{ merch.name }}" />
-      <h2><a href="">{{ merch.name }}</a></h2>
-      <p>Precio: €{{ merch.price}}</p>
+      <a [routerLink]="['/producto-detail-merch', merch.id]">
+        <img [src]="merch.image" alt="{{ merch.name }}" />
+        <h2>{{ merch.name }}</h2>
+      </a>
+      <p>Precio: {{ merch.price | currency }}</p>
       <button (click)="addToCart(merch)">🛒</button>
     </div>
-    <div class="pagination">
-      <button (click)="prevPage()" [disabled]="currentPage === 1">← Anterior</button>
-    <span>Página {{ currentPage }} de {{ totalPages }}</span>
-    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente →</button>
-    </div>
+  </div>
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">← Anterior</button>
+  <span>Página {{ currentPage }} de {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente →</button>
   </div>
 </div>
 <app-footer></app-footer>

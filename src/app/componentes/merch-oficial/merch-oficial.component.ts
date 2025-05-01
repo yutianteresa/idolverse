@@ -3,10 +3,11 @@ import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { FooterComponent } from '../footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart.service';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-merch-oficial',
-  imports: [NavBarComponent, FooterComponent, CommonModule],
+  imports: [NavBarComponent, FooterComponent, CommonModule, RouterLink],
   standalone: true,
   templateUrl: './merch-oficial.component.html',
   styleUrls: ['./merch-oficial.component.css']

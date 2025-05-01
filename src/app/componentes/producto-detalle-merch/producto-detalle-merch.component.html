@@ -1,0 +1,35 @@
+<app-nav-bar></app-nav-bar>
+<div class="product-detail-container" *ngIf="producto">
+  <div class="producto-detail">
+    <div class="image-section">
+        <img [src]="producto.image" [alt]="producto.name" />
+    </div>
+    <div class="info-section">
+      <h2>{{ producto.name }}</h2>
+      <h3>{{ producto.artist }}</h3>
+      <p class="price">{{ producto.price | currency }}</p>
+      <div class="qty-selector">
+        <button (click)="decreaseQty()">−</button>
+        <span>{{ quantity }}</span>
+        <button (click)="increaseQty()">+</button>
+      </div>
+      <div class="actions">
+        <button class="add-to-cart" (click)="addToCart(producto)">Agregar a carrito</button>
+      </div>
+  
+      <div class="note">
+        <img src="assets/img/ht_family_mk_500px_486e026b-47b1-4027-bb97-20178fe8aae2.webp" alt="HANTEO">
+        <p>Compatible con HANTEO Chart. Envío seguro garantizado.</p>
+    </div>
+  </div>
+  </div>
+  <div class="description-section">
+    <h3>Descripción</h3>
+    <p>{{ producto.description }}</p>
+  </div>
+</div>
+<ng-template #noProduct>
+  <p>Producto no encontrado.</p>
+</ng-template>
+
+<app-footer></app-footer>

@@ -1,10 +1,12 @@
 * {
-    border-radius: 20px;
+    border-radius: 5px;
 }
 header, section {
     text-align: center;
-    margin: 10px;
-    padding: 10px;
     color: white;
     background-color: #e0b3ff;
+}
+img {
+    width: 30%;
+    height: auto;
 }
