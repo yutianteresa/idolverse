@@ -1,12 +1,4 @@
-.cart-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin: 1rem 0;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1rem;
-}
+
 button {
   margin-left: auto;
   background-color: #bf87ff;
@@ -15,4 +7,22 @@ button {
   padding: 0.4rem 0.8rem;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+}
+* {
+  text-align: left;
+  justify-content: start;
+  margin: 5px;
+}
+.producto {
+  flex-direction: row;
+  gap: 1rem;
+  margin: 1rem 0;
+  border-bottom: 1px solid aliceblue;
+  padding-bottom: 1rem;
+}
+.producto img {
+  width: 20%;
+  height: auto;
+  border-radius: 5px;
 }
