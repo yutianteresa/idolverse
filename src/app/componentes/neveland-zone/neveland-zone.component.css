@@ -1,47 +1,50 @@
 .gallery {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-gap: 16px;
-padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
 }
-
+.idle {
+  width: 100%;
+}
 .gallery-item img {
-width: 100%;
-height: auto;
-border-radius: 5px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-transition: transform 0.3s;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
 }
 
 .gallery-item img:hover {
-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .neverland-zone {
-padding: 1rem;
-text-align: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 .neverland-list {
-display: flex;
-gap: 1rem;
-flex-wrap: wrap;
-justify-content: space-evenly;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .neverland {
-border: 1px solid #ccc;
-border-radius: 12px;
-padding: 1rem;
-width: 20%;
-box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 20%;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
+
 .neverland:hover {
-transform: scale(1.05);
+  transform: scale(1.05);
 }
 img {
-width: 75%;
-border-radius: 8px;
+  width: 75%;
+  border-radius: 8px;
 }
 a {
 text-decoration: none;
@@ -58,7 +61,7 @@ color: #333;
 text-decoration: none;
 }
 button {
-background-color: #d4c7e3;
+background-color: #caa7f2;
 border: none;
 color: white;
 padding: 15px 32px;
@@ -86,7 +89,7 @@ font-size: 16px;
 .pagination button {
 padding: 5px 15px;
 border-radius: 10px;
-background-color: #d4c7e3;
+background-color: #caa7f2;
 border: none;
 cursor: pointer;
 }

@@ -37,7 +37,7 @@ a:visited {
   text-decoration: none;
 }
 button {
-  background-color: #d4c7e3;
+  background-color: #caa7f2;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -65,7 +65,7 @@ button:hover {
 .pagination button {
   padding: 5px 15px;
   border-radius: 10px;
-  background-color: #d4c7e3;
+  background-color: #caa7f2;
   border: none;
   cursor: pointer;
 }

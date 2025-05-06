@@ -15,15 +15,15 @@ import { CartService } from "../../services/cart.service";
 export class AlbumComponent {
   constructor(private cartService: CartService) {}
   addAlbumToCart(album: any) {
-  this.cartService.addToCart(album);
-}
+    this.cartService.addToCart(album);
+  }
 productos = [
   {
     id: 1,
     name: 'STRATEGY',
     artist: 'TWICE',
     price: 24.99,
-    image: 'https://i.scdn.co/image/ab67616d0000b273acf8ff27be32aec99d6c99a0',
+    image: 'assets/img/strategy_cover.jpg',
     description: 'assets/img/STRATEGY.jpg'
   },
   {

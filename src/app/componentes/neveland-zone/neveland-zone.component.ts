@@ -5,9 +5,11 @@ import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart.service';
 import { RouterLink } from '@angular/router';
 
+
 @Component({
   selector: 'app-neveland-zone',
   imports: [NavBarComponent, FooterComponent, CommonModule, RouterLink],
+  standalone: true,
   templateUrl: './neveland-zone.component.html',
   styleUrl: './neveland-zone.component.css'
 })

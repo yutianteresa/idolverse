@@ -1,12 +1,13 @@
 <app-nav-bar></app-nav-bar>
 <div class="neverland-zone">
+  <img src="/assets/img/i-dle_new_logo.jpg" alt="i-dle logo" class="idle"/>
   <h1>Neverland Zone</h1>
   <div class="gallery">
     <div class="gallery-item" *ngFor="let img of imagenesAnuncios">
       <img [src]="img.src" [alt]="img.alt" />
     </div>
   </div>
-  <h2>Bienvenido a la Neverland Zone, la zona solamente para fandom de grupo de chica (G)I-DLE, el lugar donde los sueños se hacen realidad. Aquí encontrarás una variedad de productos exclusivos y limitados que no querrás perderte.</h2>
+  <h2>Bienvenido a la Neverland Zone, la zona solamente para la fandom del grupo de chicas de K-pop i-dle, anteriormente conocido como (G)I-DLE, el lugar donde los sueños se hacen realidad. Aquí encontrarás una variedad de productos exclusivos y limitados que no querrás perderte.</h2>
   <div class="neverland-list">
     <div class="neverland" *ngFor="let producto of pagedProducts">
       <a [routerLink]="['//producto-detail-i-dle', producto.id]">

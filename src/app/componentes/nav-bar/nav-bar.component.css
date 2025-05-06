@@ -1,5 +1,5 @@
 * {
-  background-color: #bf87ff;
+ 
   border-radius: 5px;
   color: aliceblue;
 }
@@ -38,8 +38,8 @@ nav {
   text-align: center;
   align-items: center;
   padding: 1rem;
-  background-color: #bf87ff;
-  border-bottom: 1px solid #bf87ff;
+  background-color: #5A1D88;
+  border-bottom: 1px solid #5A1D88;
 }
 
 .nav-left ul {
@@ -62,7 +62,7 @@ ul.open {
   padding: 1rem 1rem;
 }
 .nav-left ul li a:hover {
-  background-color: #8f2dff;
+  background-color: #7b29ba;
   border-radius: 20px;
   text-decoration: none;
   transform: scale(1.05);
@@ -84,7 +84,7 @@ button {
   padding: 0.4rem 0.8rem;
   border: none;
   border-radius: 5px;
-  background-color: #d9b8ff;
+  background-color: #bf87ff;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s, transform 0.3s;
@@ -107,7 +107,7 @@ button:hover {
   .nav-left ul {
     display: none;
     flex-direction: column;
-    background-color: #bf87ff;
+    background-color: #333;
     position: absolute;
     top: 70px;
     left: 0;

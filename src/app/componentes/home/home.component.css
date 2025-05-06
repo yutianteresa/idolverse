@@ -1,10 +1,10 @@
 * {
     border-radius: 5px;
 }
-header, section {
+.home {
     text-align: center;
     color: white;
-    background-color: #e0b3ff;
+    background-color: #000000;
 }
 img {
     width: 30%;
